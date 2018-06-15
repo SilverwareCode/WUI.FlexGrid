@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+
+    <style>
+        body {
+            font-family: 'Open Sans';
+            font-size: 14px;
+        }
+    </style>
+    <link href="css/WUI.flexGrid.css" rel="stylesheet" />
+    <link href="/css/WUI.Default.css" rel="stylesheet" />
+    <script src="/js/WUI.SortTable.js"></script>
+    <script src="/js/WUI.FlexGrid.js"></script>
+    <script src="/js/WUI.js"></script>
+    <script src="/js/Data.js"></script>
+</head>
+<body>
+
+    <div id="mydiv1" class="WUIflexgrid">
+
+    </div>
+
+
+    <script>
+        WUI.flexGrid("mydiv1", data);
+    </script>
+
+    <script>
+        window.addEventListener('eventDataSourceUpdated', function (e) {
+            console.log("UPDATED data:");
+            console.dir(e.detail)
+        }, false);
+    </script>
+
+
+
+</body>
+</html>
